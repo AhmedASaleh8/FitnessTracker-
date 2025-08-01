@@ -1,0 +1,1 @@
+اسم الطالب : " أحمد أشرف صالح " , اسم التطبيق : Fitness Tracker , فكرة التطبيق : تطبيق تماريين رياضية في المنزل يستهدف الشباب الكسالى الذين لا يريدون الذهاب للجيم , رابط فيديو الشرح : https://drive.google.com/file/d/10qYX68mQ3bHKgSaHV_AKXl1GOWfYSxOE/view?usp=sharing
