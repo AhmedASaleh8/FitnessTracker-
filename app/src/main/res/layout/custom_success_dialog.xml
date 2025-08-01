@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#333333"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tvSuccessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:fontFamily="serif"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        android:layout_marginTop="8dp" />
+
+     <TextView
+        android:id="@+id/tvSuccessMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account created successfully"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#FFEB3B"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Continue"
+        android:textSize="18dp"
+        android:backgroundTint="#FF9800"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false" />
+</LinearLayout>

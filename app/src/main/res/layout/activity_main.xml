@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Exercises"
+            android:textColor="#FF9800"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWelcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Train Today, Thank Tomorrow"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#FFEB3B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <!-- Exercises Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerSection"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Exercise 1: Arm Training -->
+            <LinearLayout
+                android:id="@+id/llExercise1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="40dp"
+                android:background="#333333"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- Exercise Image -->
+                <ImageView
+                    android:id="@+id/ivExercise1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/hands"
+                    android:scaleType="centerCrop"
+                    android:background="#FF9800"
+                    android:padding="0dp" />
+
+                <!-- Exercise Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Arm Training"
+                        android:textColor="#FFD700"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Build strong arms"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Duration: 30 mins"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:id="@+id/btn_nextpage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icon"
+                    android:contentDescription="Next"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    />
+
+                </LinearLayout>
+
+            <!-- Exercise 2: leg Training -->
+            <LinearLayout
+                android:id="@+id/llExercise2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="40dp"
+                android:background="#333333"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- Exercise Image -->
+                <ImageView
+                    android:id="@+id/ivExercise2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/foot"
+                    android:scaleType="centerCrop"
+                    android:background="#FF9800"
+                    android:padding="5dp" />
+
+                <!-- Exercise Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leg Training"
+                        android:textColor="#FFD700"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Strengthen your legs"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Duration: 25 mins"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:id="@+id/btn_nextpage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icon"
+                    android:contentDescription="Next"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+            </LinearLayout>
+
+            <!-- Exercise 3: Core Training -->
+            <LinearLayout
+                android:id="@+id/llExercise3"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="15dp"
+                android:background="#333333"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- Exercise Image -->
+                <ImageView
+                    android:id="@+id/ivExercise3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/sixpack"
+                    android:scaleType="centerCrop"
+                    android:background="#FF9800"
+                    android:padding="1dp" />
+
+                <!-- Exercise Details -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Core Training"
+                        android:textColor="#FFD700"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Strengthen your core"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Duration: 20 mins"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Arrow Icon -->
+                <ImageView
+                    android:id="@+id/btn_nextpage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/icon"
+                    android:contentDescription="Next"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#333333"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/llHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:textSize="10sp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <!-- Settings -->
+        <LinearLayout
+            android:id="@+id/llSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/settings"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:textSize="10sp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/profile"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:textSize="10sp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
