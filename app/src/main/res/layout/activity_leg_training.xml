@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1A1A1A"
-    tools:context=".ArmTrainingActivity">
+    tools:context=".LegTrainingActivity">
 
-    <!-- Back button  -->
     <ImageView
         android:id="@+id/btn_back"
         android:layout_width="30dp"
@@ -18,13 +17,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
-    <!-- Main Title -->
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Arm Training"
+        android:text="Leg Training"
         android:textColor="#FF8500"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -32,19 +30,17 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true" />
 
-    <!-- Exercise image -->
     <ImageView
         android:id="@+id/iv_exercise_main"
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/pushup"
+        android:src="@drawable/squat"
         android:scaleType="centerCrop"
         android:background="#2D2D2D"
         android:layout_below="@id/tv_title" />
 
-    <!-- Basic Information Card -->
     <LinearLayout
         android:id="@+id/info_container"
         android:layout_width="match_parent"
@@ -57,7 +53,6 @@
         android:gravity="center"
         android:layout_below="@id/iv_exercise_main">
 
-        <!-- Number of exercises  -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -80,7 +75,6 @@
                 android:text="Exercises"
                 android:textColor="#CCCCCC"
                 android:textSize="14sp" />
-
         </LinearLayout>
 
         <View
@@ -88,7 +82,6 @@
             android:layout_height="40dp"
             android:background="#555555" />
 
-        <!-- Duration -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -111,7 +104,6 @@
                 android:text="Minutes"
                 android:textColor="#CCCCCC"
                 android:textSize="14sp" />
-
         </LinearLayout>
 
         <View
@@ -119,7 +111,6 @@
             android:layout_height="40dp"
             android:background="#555555" />
 
-        <!-- Difficulty level -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -142,12 +133,9 @@
                 android:text="Medium"
                 android:textColor="#CCCCCC"
                 android:textSize="14sp" />
-
         </LinearLayout>
-
     </LinearLayout>
 
-    <!-- Description -->
     <ScrollView
         android:id="@+id/sv_description"
         android:layout_width="match_parent"
@@ -162,14 +150,12 @@
             android:id="@+id/tv_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="How Push-Up Works:\n 1.Engage the chest, triceps, shoulders, and core muscles .\n\n 2.Lower your body slowly by bending your elbows, causing your muscles to lengthen under tension (eccentric contraction) .\n\n 3. Keep your body straight and stable using your core muscles.\n\n 4. Push your body upward by straightening your arms, contracting the muscles actively (concentric contraction) .\n\n 5. This repeated movement strengthens the upper body muscles and improves endurance and stability ."
+            android:text="How Squat Works:\n 1.Stand tall: Feet shoulder-width apart, chest up. .\n\n 2.Start lowering: Bend your knees as if sitting on a chair .\n\n 3. Go down: Until your thighs are almost parallel to the floor. \n\n 4. Rise up: Push through your heels and return to standing .\n\n 5. Repeat: 10–15 times for 3–4 sets."
             android:textColor="#FFC107"
             android:textSize="14sp"
             android:lineSpacingExtra="6dp" />
-
     </ScrollView>
 
-    <!-- Start workout button -->
     <Button
         android:id="@+id/btn_start_workout"
         android:layout_width="match_parent"

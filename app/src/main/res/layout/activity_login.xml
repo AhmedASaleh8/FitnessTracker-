@@ -27,7 +27,8 @@
         android:textColor="#FF9800"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:fontFamily="serif" />
+        android:fontFamily="serif"
+        />
 
     <!-- Login Form Container -->
     <LinearLayout

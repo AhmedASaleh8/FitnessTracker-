@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="72dp"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#222">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pushup" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="10dp">
+
+        <TextView
+            android:id="@+id/tvLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arm Workout • 2 ex • 3 min"
+            android:textColor="#FF9800"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-08-21 07:36"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

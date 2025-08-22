@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ArmTrainingActivity extends AppCompatActivity {
+public class CoreTrainingActivity extends AppCompatActivity {
 
     private ImageView btnBack;
     private Button btnStartWorkout;
@@ -18,11 +18,10 @@ public class ArmTrainingActivity extends AppCompatActivity {
 
     private SharedPreferences prefs;
     private static final String SP_NAME = "workout_prefs";
-    private static final String KEY_PREFIX = "arm_";
+    private static final String KEY_PREFIX = "core_";
 
-    //  Options
-    private final int[] EX_OPTS  = {1, 2, 3};        // Number of exercises
-    private final int[] MIN_OPTS = {1, 3, 5};       // Minutes per exercise
+    private final int[] EX_OPTS  = {1, 2, 3};
+    private final int[] MIN_OPTS = {1, 3, 5};
     private final String[] DIFF_LABELS = {"Easy", "Medium", "Hard"};
     private final String[] DIFF_STARS  = {"★☆☆", "★★☆", "★★★"};
 
@@ -31,7 +30,7 @@ public class ArmTrainingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_arm_training);
+        setContentView(R.layout.activity_core_training);
 
         prefs = getSharedPreferences(SP_NAME, MODE_PRIVATE);
 
@@ -74,9 +73,9 @@ public class ArmTrainingActivity extends AppCompatActivity {
         btnBack.setOnClickListener(v -> finish());
 
         btnStartWorkout.setOnClickListener(v -> {
-            Intent i = new Intent(ArmTrainingActivity.this, WorkoutSessionActivity.class);
-            i.putExtra("session_type", "arm");
-            i.putExtra("session_title", "Arm Workout");
+            Intent i = new Intent(CoreTrainingActivity.this, WorkoutSessionActivity.class);
+            i.putExtra("session_type", "core");
+            i.putExtra("session_title", "Core Workout");
             startActivity(i);
         });
     }

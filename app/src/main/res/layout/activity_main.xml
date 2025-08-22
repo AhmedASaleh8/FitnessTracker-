@@ -13,7 +13,21 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="30dp">
 
-        <!-- Welcome Text -->
+        <!-- History Button -->
+
+        <ImageView
+            android:id="@+id/ivHistory"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="History"
+            android:padding="4dp"
+            android:src="@drawable/history" />
+
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
@@ -37,8 +51,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textColor="#FFEB3B"
             android:textSize="14sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -68,17 +81,14 @@
                 android:clickable="true"
                 android:focusable="true">
 
-                <!-- Exercise Image -->
                 <ImageView
                     android:id="@+id/ivExercise1"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:src="@drawable/hands"
                     android:scaleType="centerCrop"
-                    android:background="#FF9800"
-                    android:padding="0dp" />
+                    android:background="#FF9800" />
 
-                <!-- Exercise Details -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -109,10 +119,8 @@
                         android:text="Duration: 30 mins"
                         android:textColor="#999999"
                         android:textSize="12sp" />
-
                 </LinearLayout>
 
-                <!-- Arrow Icon -->
                 <ImageView
                     android:id="@+id/btn_nextpage"
                     android:layout_width="30dp"
@@ -120,14 +128,11 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/icon"
-                    android:contentDescription="Next"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    />
+                    android:contentDescription="Next" />
 
-                </LinearLayout>
+            </LinearLayout>
 
-            <!-- Exercise 2: leg Training -->
+            <!-- Exercise 2: Leg Training -->
             <LinearLayout
                 android:id="@+id/llExercise2"
                 android:layout_width="match_parent"
@@ -140,7 +145,6 @@
                 android:clickable="true"
                 android:focusable="true">
 
-                <!-- Exercise Image -->
                 <ImageView
                     android:id="@+id/ivExercise2"
                     android:layout_width="70dp"
@@ -150,7 +154,6 @@
                     android:background="#FF9800"
                     android:padding="5dp" />
 
-                <!-- Exercise Details -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -181,10 +184,8 @@
                         android:text="Duration: 25 mins"
                         android:textColor="#999999"
                         android:textSize="12sp" />
-
                 </LinearLayout>
 
-                <!-- Arrow Icon -->
                 <ImageView
                     android:id="@+id/btn_nextpage"
                     android:layout_width="30dp"
@@ -192,9 +193,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/icon"
-                    android:contentDescription="Next"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true" />
+                    android:contentDescription="Next" />
 
             </LinearLayout>
 
@@ -211,17 +210,14 @@
                 android:clickable="true"
                 android:focusable="true">
 
-                <!-- Exercise Image -->
                 <ImageView
                     android:id="@+id/ivExercise3"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:src="@drawable/sixpack"
                     android:scaleType="centerCrop"
-                    android:background="#FF9800"
-                    android:padding="1dp" />
+                    android:background="#FF9800" />
 
-                <!-- Exercise Details -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -252,10 +248,8 @@
                         android:text="Duration: 20 mins"
                         android:textColor="#999999"
                         android:textSize="12sp" />
-
                 </LinearLayout>
 
-                <!-- Arrow Icon -->
                 <ImageView
                     android:id="@+id/btn_nextpage"
                     android:layout_width="30dp"
@@ -263,9 +257,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/icon"
-                    android:contentDescription="Next"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true" />
+                    android:contentDescription="Next" />
 
             </LinearLayout>
 
@@ -308,7 +300,6 @@
                 android:textColor="#FF9800"
                 android:textSize="10sp"
                 android:layout_marginTop="5dp" />
-
         </LinearLayout>
 
         <!-- Settings -->
@@ -336,7 +327,6 @@
                 android:textColor="#FF9800"
                 android:textSize="10sp"
                 android:layout_marginTop="5dp" />
-
         </LinearLayout>
 
         <!-- Profile -->
@@ -364,7 +354,6 @@
                 android:textColor="#FF9800"
                 android:textSize="10sp"
                 android:layout_marginTop="5dp" />
-
         </LinearLayout>
 
     </LinearLayout>

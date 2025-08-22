@@ -19,7 +19,6 @@ public class SplashActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        // ربط العناصر
         initViews();
 
         setClickListeners();
@@ -36,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
                 // الانتقال إلى صفحة تسجيل الدخول أو التسجيل
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish(); // إغلاق شاشة البداية
+                finish();
             }
         });
     }

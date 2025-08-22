@@ -23,10 +23,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        // ربط عناصر الواجهة
         initViews();
 
-        // إعداد الضغطات
         setupClickListeners();
     }
 
@@ -67,7 +65,6 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // ✅ عرض Dialog ترحيبي مخصص بألوان التطبيق
         View dialogView = LayoutInflater.from(this).inflate(R.layout.custom_success_dialog, null);
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setView(dialogView)

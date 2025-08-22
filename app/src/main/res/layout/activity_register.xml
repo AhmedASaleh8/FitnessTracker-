@@ -179,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Already have an account? Login"
-                android:textColor="#CCCCCC "
+                android:textColor="#F72F2F2F "
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.FitnessTracker"
         tools:targetApi="31">
 
-        <!-- شاشة البداية - الصفحة الأولى التي تظهر -->
+        <!-- Launcher / Splash -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -24,24 +24,49 @@
             </intent-filter>
         </activity>
 
-        <!-- صفحة تمرين الذراعين -->
+        <!-- Home -->
         <activity
-            android:name=".ArmTrainingActivity"
+            android:name=".MainActivity"
             android:exported="false" />
 
-        <!-- صفحة التسجيل -->
+        <!-- Auth -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
 
-        <!-- صفحة تسجيل الدخول -->
+        <!-- Training screens -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".ArmTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LegTrainingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoreTrainingActivity"
             android:exported="false" />
 
-        <!-- الصفحة الرئيسية -->
+        <!-- Workout session (timer) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".WorkoutSessionActivity"
+            android:exported="false" />
+
+        <!-- Settings / Profile / About -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+
+        <!-- History (workout log) -->
+        <activity
+            android:name=".HistoryActivity"
             android:exported="false" />
 
     </application>

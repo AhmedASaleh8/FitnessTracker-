@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:padding="16dp">
+
+    <!-- Top bar: Back button + Title -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="#FF9800"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#2D2D2D"
+                android:padding="16dp"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:textColor="#FFD700"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display Name"
+                    android:textColor="#CCCCCC"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/etDisplayName"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="Enter your name"
+                    android:textColor="@color/black"
+                    android:textColorHint="#AAAAAA"
+                    android:padding="12dp"
+                    android:layout_marginTop="6dp"/>
+
+                <Button
+                    android:id="@+id/btnSaveName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Save Name"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="#FF9800"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- Dark Mode -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#2D2D2D"
+                android:padding="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appearance"
+                    android:textColor="#FFD700"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dark mode"
+                        android:textColor="#CCCCCC"
+                        android:textSize="14sp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swDarkMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Language-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#2D2D2D"
+                android:padding="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Language"
+                    android:textColor="#FFD700"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/rgLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbArabic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="عربي"
+                        android:textColor="#EEEEEE"/>
+
+                    <RadioButton
+                        android:id="@+id/rbEnglish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="English"
+                        android:textColor="#EEEEEE"
+                        android:layout_marginStart="16dp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--About the application-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#2D2D2D"
+                android:padding="16dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textColor="#FFD700"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="About the App"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="#555555"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!--Log Out-->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Log out"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="#E53935"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

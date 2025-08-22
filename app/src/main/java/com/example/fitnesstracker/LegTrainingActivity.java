@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ArmTrainingActivity extends AppCompatActivity {
+public class LegTrainingActivity extends AppCompatActivity {
 
     private ImageView btnBack;
     private Button btnStartWorkout;
@@ -18,11 +18,10 @@ public class ArmTrainingActivity extends AppCompatActivity {
 
     private SharedPreferences prefs;
     private static final String SP_NAME = "workout_prefs";
-    private static final String KEY_PREFIX = "arm_";
+    private static final String KEY_PREFIX = "leg_";
 
-    //  Options
-    private final int[] EX_OPTS  = {1, 2, 3};        // Number of exercises
-    private final int[] MIN_OPTS = {1, 3, 5};       // Minutes per exercise
+    private final int[] EX_OPTS  = {1, 2, 3};    // Number of exercises
+    private final int[] MIN_OPTS = {1, 3, 5};  // Minutes per exercise
     private final String[] DIFF_LABELS = {"Easy", "Medium", "Hard"};
     private final String[] DIFF_STARS  = {"★☆☆", "★★☆", "★★★"};
 
@@ -31,7 +30,7 @@ public class ArmTrainingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_arm_training);
+        setContentView(R.layout.activity_leg_training);
 
         prefs = getSharedPreferences(SP_NAME, MODE_PRIVATE);
 
@@ -47,7 +46,7 @@ public class ArmTrainingActivity extends AppCompatActivity {
         int diff = prefs.getInt(KEY_PREFIX + "difficulty", diffIdx);
         exIdx   = indexOf(EX_OPTS,  ex,   exIdx);
         minIdx  = indexOf(MIN_OPTS, mins, minIdx);
-        diffIdx = clamp(diff, 0, 2);
+        diffIdx = Math.max(0, Math.min(2, diff));
 
         bindUI();
 
@@ -74,9 +73,9 @@ public class ArmTrainingActivity extends AppCompatActivity {
         btnBack.setOnClickListener(v -> finish());
 
         btnStartWorkout.setOnClickListener(v -> {
-            Intent i = new Intent(ArmTrainingActivity.this, WorkoutSessionActivity.class);
-            i.putExtra("session_type", "arm");
-            i.putExtra("session_title", "Arm Workout");
+            Intent i = new Intent(LegTrainingActivity.this, WorkoutSessionActivity.class);
+            i.putExtra("session_type", "leg");
+            i.putExtra("session_title", "Leg Workout");
             startActivity(i);
         });
     }
@@ -100,9 +99,5 @@ public class ArmTrainingActivity extends AppCompatActivity {
     private int indexOf(int[] arr, int val, int defIdx) {
         for (int i = 0; i < arr.length; i++) if (arr[i] == val) return i;
         return defIdx;
-    }
-
-    private int clamp(int v, int min, int max) {
-        return Math.max(min, Math.min(max, v));
     }
 }

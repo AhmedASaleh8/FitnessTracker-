@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:padding="16dp">
+
+    <!-- Back button  -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/back_arrow"
+        android:contentDescription="Back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About the App"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp"
+            android:lineSpacingExtra="6dp"
+            android:padding="8dp"
+            android:text="Fitness Tracker is a simple home-workout app that helps you build a daily movement habit without equipment.\nIt offers basic tracks for arms, legs, and core workouts, with brief instructions and an image for each exercise, plus suggested durations, so you can finish a session in about 20-30 minutes depending on the track you choose.\n\nWhy it helps:\n• Clear, equipment-free exercises you can do at home.\n• Clean, comfortable UI with Dark Mode.\n• Arabic and English support.\n• Save your display name inside the app.\n• Works offline for the basic steps.\n\nNote: This is an educational preview to demonstrate the idea and design; content will be expanded later."/>
+    </ScrollView>
+
+</RelativeLayout>

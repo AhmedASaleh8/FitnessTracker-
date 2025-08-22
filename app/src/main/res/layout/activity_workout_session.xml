@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header: Back + Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btn_back_session"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_arrow"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tv_session_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Workout Session"
+            android:textColor="#FF9800"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Exercise counter -->
+    <TextView
+        android:id="@+id/tv_ex_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise 1 of 3"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Exercise name -->
+    <TextView
+        android:id="@+id/tv_exercise_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Push-Ups"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Placeholder image/card -->
+    <ImageView
+        android:id="@+id/iv_exercise_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:background="#2D2D2D"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pushup" />
+
+    <!-- Timer big -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00:30"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        android:textSize="42sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <!-- Controls: Start/Pause + Reset -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_start_pause"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Start"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:background="#FF9800" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="#FFFFFF"
+            android:background="#555555" />
+    </LinearLayout>
+
+    <!-- Navigation: Next + Finish -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:background="#FFC107" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Finish"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="#FF5722" />
+    </LinearLayout>
+
+</LinearLayout>
